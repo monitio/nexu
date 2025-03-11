@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "commonjs",
+    "outDir": "dist",
+    "rootDir": ".",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src/**/*",
+    "bin/**/*",
+    "README.md"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "package.json",
+    ".gitignore"
+  ]
+}
