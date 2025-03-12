@@ -1,7 +1,7 @@
 {
   "name": "webbed",
   "description": "A WIP web TS and JS framework.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "repository": {
     "type": "git",
@@ -10,13 +10,15 @@
   "bugs": {
     "url": "https://github.com/monitio/webbed/issues"
   },
-  "main": "src/index.js",
+  "main": "./src/webbed.js",
   "bin": {
-    "webbed": "bin/cli.js"
+    "webbed": "./src/webbed.js",
+    "webbed:debug": "./bin/cli.js"
   },
   "scripts": {
     "inner:test": "echo \"Error: use the CLI tests instead\" && exit 1",
-    "outer:start": "npm run build && node dist/src/index.js",
+    "inner:start": "node src/webbed.js",
+    "outer:start": "npm run outer:build && node dist/src/webbed.js",
     "outer:build": "tsc && copyfiles README.md dist/"
   },
   "keywords": [

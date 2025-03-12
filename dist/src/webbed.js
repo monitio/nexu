@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -14,6 +15,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-__exportStar(require("./server"), exports);
-__exportStar(require("./router"), exports);
-__exportStar(require("./templates"), exports);
+require("../bin/cli");
+__exportStar(require("./web/server"), exports);
+__exportStar(require("./web/router"), exports);
+__exportStar(require("./web/templates"), exports);

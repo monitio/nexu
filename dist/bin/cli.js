@@ -5,8 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const commander_1 = require("commander");
-const templates_1 = require("../src/templates");
-const server_1 = require("../src/server");
+const templates_1 = require("../src/web/templates");
+const server_1 = require("../src/web/server");
 const package_json_1 = __importDefault(require("../package.json"));
 const program = new commander_1.Command();
 program.version(package_json_1.default.version);

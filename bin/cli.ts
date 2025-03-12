@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
-import { createTemplate } from '../src/templates';
-import { runServer } from '../src/server';
+import { createTemplate } from '../src/web/templates';
+import { runServer } from '../src/web/server';
 
 import pkg from '../package.json';
 
