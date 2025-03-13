@@ -1,4 +1,7 @@
 # package stuff
-node_modules
 
+node_modules
 package-lock.json
+
+template/node_modules
+template/package-lock.json

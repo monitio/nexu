@@ -1,0 +1,10 @@
+{
+  "name": "webbed-app",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "npx webbed@latest dev"
+  },
+  "dependencies": {
+    "webbed": "^0.0.3"
+  }
+}

@@ -15,7 +15,5 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-require("../bin/cli");
-__exportStar(require("./web/server"), exports);
-__exportStar(require("./web/router"), exports);
-__exportStar(require("./web/templates"), exports);
+require("./cli/cli");
+__exportStar(require("./server"), exports);

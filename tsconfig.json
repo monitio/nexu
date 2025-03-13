@@ -11,13 +11,12 @@
   },
   "include": [
     "src/**/*",
-    "bin/**/*",
-    "README.md"
+    "README.md",
+    "package.json"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "package.json",
     ".gitignore"
   ]
 }

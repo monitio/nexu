@@ -1,7 +1,7 @@
 {
   "name": "webbed",
   "description": "A WIP web TS and JS framework.",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "private": false,
   "repository": {
     "type": "git",
@@ -13,13 +13,14 @@
   "main": "./src/webbed.js",
   "bin": {
     "webbed": "./src/webbed.js",
-    "webbed:debug": "./bin/cli.js"
+    "webbed:debug": "./src/cli/cli.js"
   },
   "scripts": {
     "inner:test": "echo \"Error: use the CLI tests instead\" && exit 1",
     "inner:start": "node src/webbed.js",
-    "outer:start": "npm run outer:build && node dist/src/webbed.js",
-    "outer:build": "tsc && copyfiles README.md dist/"
+    "outer:build": "tsc",
+    "outer:copy": "node scripts/copy.js",
+    "outer:start": "node dist/src/webbed.js"
   },
   "keywords": [
     "WIP",
@@ -33,11 +34,15 @@
   "author": "James-Beans",
   "license": "GPL-3.0-only",
   "dependencies": {
+    "chalk": "^5.4.1",
     "commander": "^13.1.0"
   },
   "devDependencies": {
+    "@types/express": "^5.0.0",
     "@types/node": "^22.13.10",
     "copyfiles": "^2.4.1",
+    "express": "^4.21.2",
+    "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
   },
   "type": "commonjs"

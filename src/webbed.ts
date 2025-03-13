@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-import '../bin/cli';
+import './cli/cli';
 
-export * from './web/server';
-export * from './web/router';
-export * from './web/templates';
+export * from './server';
