@@ -5,6 +5,7 @@
     "dev": "npx webbed@latest dev"
   },
   "dependencies": {
-    "webbed": "^0.0.3"
+    "webbed": "latest",
+    "express": "latest"
   }
 }
