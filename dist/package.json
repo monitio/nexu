@@ -1,7 +1,7 @@
 {
   "name": "webbed",
   "description": "A WIP web TS and JS framework.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": false,
   "repository": {
     "type": "git",
@@ -18,9 +18,9 @@
   "scripts": {
     "inner:test": "echo \"Error: use the CLI tests instead\" && exit 1",
     "inner:start": "node src/webbed.js",
-    "outer:build": "tsc",
+    "outer:build": "tsc && npm run outer:copy",
     "outer:copy": "node scripts/copy.js",
-    "outer:start": "node dist/src/webbed.js"
+    "outer:start": "npm run outer:build && npm run outer:copy && node dist/src/webbed.js"
   },
   "keywords": [
     "WIP",
@@ -35,7 +35,11 @@
   "license": "GPL-3.0-only",
   "dependencies": {
     "chalk": "^5.4.1",
-    "commander": "^13.1.0"
+    "child_process": "^1.0.2",
+    "chokidar": "^4.0.3",
+    "commander": "^13.1.0",
+    "path": "^0.12.7",
+    "socket.io": "^4.8.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",

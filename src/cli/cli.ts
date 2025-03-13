@@ -2,9 +2,10 @@
 import { Command } from "commander";
 import chalk from "chalk";
 import fs from "fs";
-import path from "path";
 import { execSync } from "child_process";
+import path from "path";
 import pkg from "../../package.json";
+import { startDevServer } from "../server";
 
 const v = pkg.version;
 const n = pkg.name;
@@ -13,10 +14,7 @@ const d = pkg.description;
 const program = new Command();
 const TEMPLATE_DIR = path.join(__dirname, "../../template");
 
-program
-  .name(n)
-  .description(d)
-  .version(v);
+program.name(n).description(d).version(v);
 
 program
   .command("create <project-name>")
@@ -35,19 +33,26 @@ program
 
     copyDir(TEMPLATE_DIR, targetDir);
 
-    console.log(chalk.blue(`Installing dependencies...`));
-    execSync("npm install", { cwd: targetDir, stdio: "inherit" });
+    // Detect package manager
+    const packageManager = detectPackageManager();
+    console.log(chalk.blue(`Installing dependencies with ${packageManager}...`));
+
+    execSync(`${packageManager} install`, { cwd: targetDir, stdio: "inherit" });
 
     console.log(chalk.green(`Project ${projectName} created successfully!`));
     console.log(chalk.yellow(`Run the following to start your project:`));
-    console.log(chalk.cyan(`cd ${projectName} && npm run dev`));
+    console.log(chalk.cyan(`cd ${projectName} && webbed dev`));
+    process.exit(0);
   });
 
 program
   .command("dev")
   .description("Start the Webbed development server")
   .action(() => {
-    import("../server").then((server) => server.startServer());
+    console.log(chalk.green("🚀 Starting the Webbed Development Server..."));
+
+    // Start the development server with live-reload
+    startDevServer();
   });
 
 program.parse(process.argv);
@@ -68,4 +73,17 @@ function copyDir(src: string, dest: string) {
       fs.copyFileSync(srcFile, destFile);
     }
   }
+}
+
+// 🔍 Detect package manager based on project setup
+function detectPackageManager(): string {
+  const projectDir = process.cwd();
+
+  if (fs.existsSync(path.join(projectDir, "pnpm-lock.yaml"))) return "pnpm";
+  if (fs.existsSync(path.join(projectDir, "yarn.lock"))) return "yarn";
+  if (fs.existsSync(path.join(projectDir, "bun.lockb"))) return "bun";
+  if (fs.existsSync(path.join(projectDir, "package-lock.json"))) return "npm";
+
+  console.log(chalk.yellow("⚠️ No lockfile detected. Defaulting to npm."));
+  return "npm"; // Default to npm if no lockfile is found
 }
