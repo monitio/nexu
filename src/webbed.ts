@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import './cli/cli';
+import Web from "./Plugin/index";
 
-export * from './server';
+export default Web;

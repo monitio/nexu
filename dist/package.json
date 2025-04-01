@@ -1,53 +1,47 @@
 {
-  "name": "webbed",
-  "description": "A WIP web TS and JS framework.",
-  "version": "0.0.6",
-  "private": false,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/monitio/webbed.git"
-  },
-  "bugs": {
-    "url": "https://github.com/monitio/webbed/issues"
-  },
-  "main": "./src/webbed.js",
-  "bin": {
-    "webbed": "./src/webbed.js",
-    "webbed:debug": "./src/cli/cli.js"
-  },
-  "scripts": {
-    "inner:test": "echo \"Error: use the CLI tests instead\" && exit 1",
-    "inner:start": "node src/webbed.js",
-    "outer:build": "tsc && npm run outer:copy",
-    "outer:copy": "node scripts/copy.js",
-    "outer:start": "npm run outer:build && npm run outer:copy && node dist/src/webbed.js"
-  },
-  "keywords": [
-    "WIP",
-    "web",
-    "webbed",
-    "website",
-    "framework",
-    "web-framework",
-    "work-in-progress"
-  ],
-  "author": "James-Beans",
-  "license": "GPL-3.0-only",
-  "dependencies": {
-    "chalk": "^5.4.1",
-    "child_process": "^1.0.2",
-    "chokidar": "^4.0.3",
-    "commander": "^13.1.0",
-    "path": "^0.12.7",
-    "socket.io": "^4.8.1"
-  },
-  "devDependencies": {
-    "@types/express": "^5.0.0",
-    "@types/node": "^22.13.10",
-    "copyfiles": "^2.4.1",
-    "express": "^4.21.2",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.2"
-  },
-  "type": "commonjs"
+    "name": "webbed",
+    "description": "A WIP web TS and JS framework.",
+    "version": "0.1.0",
+    "private": false,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/monitio/webbed.git"
+    },
+    "bugs": {
+        "url": "https://github.com/monitio/webbed/issues"
+    },
+    "main": "./src/webbed.js",
+    "bin": {
+        "webbed": "./src/cli.js"
+    },
+    "scripts": {
+        "project:build": "tsc",
+        "project:test": "echo \"Error: use the CLI tests instead if made\" && exit 1",
+        "cli:start": "npm run project:build && npm run project:copy && node dist/src/webbed.js"
+    },
+    "keywords": [
+        "WIP",
+        "web",
+        "webbed",
+        "website",
+        "framework",
+        "web-framework",
+        "work-in-progress"
+    ],
+    "author": "James-Beans",
+    "license": "GPL-3.0-only",
+    "dependencies": {
+        "chalk": "^5.4.1",
+        "child_process": "^1.0.2",
+        "commander": "^13.1.0",
+        "path": "^0.12.7",
+        "vite": "^6.2.4"
+    },
+    "devDependencies": {
+        "@types/node": "^22.13.10",
+        "copyfiles": "^2.4.1",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.8.2"
+    },
+    "type": "commonjs"
 }
