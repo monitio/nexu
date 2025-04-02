@@ -1,7 +1,7 @@
 {
     "name": "webbed",
     "description": "A WIP web TS and JS framework.",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "private": false,
     "repository": {
         "type": "git",
@@ -10,15 +10,18 @@
     "bugs": {
         "url": "https://github.com/monitio/webbed/issues"
     },
-    "main": "./src/webbed.js",
+    "main": "./src/nexu.js",
+    "exports": {
+        ".": "./src/nexu.js"
+    },
     "bin": {
-        "webbed": "./src/cli.js"
+        "nexu": "./src/cli.js"
     },
     "scripts": {
         "project:build": "tsc && npm run project:copy",
         "project:test": "echo \"Error: use the CLI tests instead if made\" && exit 1",
         "project:copy": "node scripts/copy.cjs",
-        "cli:start": "npm run project:build && npm run project:copy && node dist/src/webbed.js"
+        "cli:start": "npm run project:build && npm run project:copy && node dist/src/nexu.js"
     },
     "keywords": [
         "WIP",

@@ -1,8 +1,8 @@
 import { Plugin } from 'vite';
 
-function Web(): Plugin {
+function Nexu_Core(): Plugin {
   return {
-    name: 'vite-plugin-webbed',  // Plugin name
+    name: 'vite-plugin-nexu',  // Plugin name
 
     transformIndexHtml(html: string) {
       // Check if the necessary tags are already present
@@ -16,4 +16,4 @@ function Web(): Plugin {
   };
  }
 
-export default Web;
+export default Nexu_Core;

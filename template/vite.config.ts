@@ -1,11 +1,11 @@
 // vite.config.ts
 import { defineConfig } from 'vite';
-import Web from 'webbed';
+import Nexu_Core from 'nexu';
 
 export default defineConfig({
   root: 'src',
   publicDir: '../public',
   plugins: [
-    Web({})
+    Nexu_Core()
   ]
 });

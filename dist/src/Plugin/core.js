@@ -1,6 +1,6 @@
-function Web() {
+function Nexu_Core() {
     return {
-        name: 'vite-plugin-webbed', // Plugin name
+        name: 'vite-plugin-nexu', // Plugin name
         transformIndexHtml(html) {
             // Check if the necessary tags are already present
             if (html.includes('<!DOCTYPE html>') && html.includes('<html')) {
@@ -11,4 +11,4 @@ function Web() {
         },
     };
 }
-export default Web;
+export default Nexu_Core;
