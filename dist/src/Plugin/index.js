@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 function Web() {
     return {
         name: 'vite-plugin-webbed', // Plugin name
@@ -13,4 +11,4 @@ function Web() {
         },
     };
 }
-exports.default = Web;
+export default Web;

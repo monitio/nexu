@@ -1,15 +1,10 @@
 #!/usr/bin/env node
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const commander_1 = require("commander");
-const package_json_1 = __importDefault(require("../package.json"));
-const v = package_json_1.default.version;
-const n = package_json_1.default.name;
-const d = package_json_1.default.description;
-const program = new commander_1.Command();
+import { Command } from "commander";
+import pkg from "../package.json";
+const v = pkg.version;
+const n = pkg.name;
+const d = pkg.description;
+const program = new Command();
 program.name(n).description(d).version(v);
 program
     .command('new')

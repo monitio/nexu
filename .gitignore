@@ -5,3 +5,30 @@ package-lock.json
 
 template/node_modules
 template/package-lock.json
+
+# template stuff
+
+# Logs
+template/logs
+template/*.log
+template/npm-debug.log*
+template/yarn-debug.log*
+template/yarn-error.log*
+template/pnpm-debug.log*
+template/lerna-debug.log*
+
+template/node_modules
+template/dist
+template/dist-ssr
+template/*.local
+
+# Editor directories and files
+template/.vscode/*
+!template/.vscode/extensions.json
+template/.idea
+template/.DS_Store
+template/*.suo
+template/*.ntvs*
+template/*.njsproj
+template/*.sln
+template/*.sw?
