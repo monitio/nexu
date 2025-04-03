@@ -1,12 +1,12 @@
 # Nexu
-A ***WIP*** web **TS** and **JS** framework running using vite-plugins.
+A ***WIP*** web **TS** framework running using a vite-plugin.
 
 ---
 
-<a href="https://www.npmjs.com/package/nexu">
+<a href="https://www.npmjs.com/package/@monitio/nexu">
   <img src="https://custom-icon-badges.demolab.com/badge/Package-NPM-red?style=for-the-badge&logo=npm&logoColor=white" />
 </a>
-<a href="https://yarnpkg.com/package?q=nexu&name=nexu">
+<a href="https://yarnpkg.com/package?q=@monitio/nexu&name=@monitio/nexu">
   <img src="https://custom-icon-badges.demolab.com/badge/Package-Yarn-blue?style=for-the-badge&logo=yarn&logoColor=white" />
 </a>
 
@@ -47,6 +47,7 @@ Make a new project using the latest version of Nexu by running the Installation 
 ### YARN:
 > [!TIP]
 > There is no way of running tools like NPX does with Yarn so you will need to install globally.
+
 > [!WARNING]
 > You will need to have the Yarn global folder in PATH for global to work. Sometimes this is automatically done by Yarn when installing.
 

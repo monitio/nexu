@@ -9,7 +9,7 @@ import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const pkg = require('../package.json');
 const v = pkg.version;
-const n = pkg.name;
+const n = "nexu";
 const d = pkg.description;
 const program = new Command();
 program.name(n).description(d).version(v);
@@ -39,14 +39,14 @@ program
 });
 program
     .command('new')
-    .description('Create a new Nexu app (alias for create).')
+    .description('Create a new Nexu app.')
     .argument('[projectName]', 'Name of the project')
     .action((projectName) => {
     createApp(projectName);
 });
 program
-    .command('test-cli')
-    .description('An example command to demonstrate functionality')
+    .command('test')
+    .description('An example command to test.')
     .action(() => {
     console.log('Running the example command...');
     console.log('Hello, World!');

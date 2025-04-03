@@ -1,2 +1,2 @@
-import Nexu_Core from "./Plugin/core.js";
-export default Nexu_Core;
+import Nexu from "./Plugin/core.js";
+export default Nexu;

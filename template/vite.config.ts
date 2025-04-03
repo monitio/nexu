@@ -1,11 +1,11 @@
 // vite.config.ts
 import { defineConfig } from 'vite';
-import Nexu_Core from 'nexu';
+import Nexu from '@monitio/nexu';
 
 export default defineConfig({
-  root: 'src',
-  publicDir: '../public',
+  root: 'src/pages',
+  publicDir: 'src/public',
   plugins: [
-    Nexu_Core()
+    Nexu()
   ]
 });
