@@ -4,15 +4,19 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "dev": "echo \"Error: use `dev:unix` or `dev:windows` instead for platform specific.\" && exit 1",
+    "dev:unix": "npx @tailwindcss/cli -i ./src/styles/styles.css -o ./src/styles/output.css --watch & vite",
+    "dev:windows": "start npx @tailwindcss/cli -i ./src/styles/styles.css -o ./src/styles/output.css --watch && vite",
+    "build": "npx @tailwindcss/cli -i ./src/styles/styles.css -o ./src/styles/output.css && tsc && vite build",
+    "preview": "npx @tailwindcss/cli -i ./src/styles/styles.css -o ./src/styles/output.css && vite preview"
   },
   "devDependencies": {
     "typescript": "~5.7.2",
     "vite": "^6.2.0"
   },
   "dependencies": {
-    "@monitio/nexu": "latest"
+    "@monitio/nexu": "^0.1.6",
+    "@tailwindcss/cli": "^4.1.2",
+    "tailwindcss": "^4.1.2"
   }
 }

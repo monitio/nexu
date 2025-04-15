@@ -1,3 +1,6 @@
+> [!WARNING]
+> This package is discontinued. Please use the more useful and updated package for Astro called [Naxer](https://github.com/monitio/naxer)
+
 # Nexu
 A ***WIP*** web **TS** framework running using a vite-plugin.
 

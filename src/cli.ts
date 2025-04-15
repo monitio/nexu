@@ -1,8 +1,9 @@
 #!/usr/bin/env node
-import { Command } from "commander";
-import * as fs from 'fs-extra';
-import * as path from 'path';
 import { fileURLToPath } from 'url';
+import { Command } from "commander";
+
+import * as path from 'path';
+import * as fs from 'fs-extra';
 
 // alternative to:
 // import pkg from "../package.json";
